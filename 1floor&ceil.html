@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Math Function</title>
+</head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+        color:white
+    }
+</style>
+<body>
+    <input type="text" name="" id="">
+    <button id="time">get Time</button>
+    <p id="result"></p>
+    <script>
+        console.log('JavaScript Math. Functions');
+        let input = document.querySelector('input[type="text"]');
+        let btn = document.querySelector('#time');
+        let result = document.getElementById('result')
+        btn.addEventListener('click',()=>{
+            timeConvert();
+        });
+        function timeConvert(){
+            let hr = Math.floor(input.value/ 60);
+            if(hr<10){
+                hr = '0'+hr;
+            }
+            let m = Math.floor(input.value%60);
+            if(m<10){
+                m='0'+m;
+            }
+            result.innerHTML = hr+':'+m +'<br>'+"("+hr+'hours'+"&"+m+'minutes)';
+        };
+
+        console.log(x)
+        console.log(y)
+        var x = 10;
+        let y = 10;
+        
+    </script>
+</body>
+
+</html>

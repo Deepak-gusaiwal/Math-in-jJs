@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript features</title>
+</head>
+<body>
+    <script>
+
+        // Part-1
+        console.log('//////////////part-1 started/////////////');
+
+        function calculatePrice(price,taxes,description){
+            taxes = taxes || 0.5;
+            description=description || 'Default items'
+            const total = price*(1+taxes)
+            console.log(`${description} with Tax : ${total}`)
+        }
+        
+        calculatePrice(100,0.07,'items');
+        calculatePrice(100,0,'');// here it consider 0 and '' as undefined or blank values
+        calculatePrice(100,undefined,undefined);
+        calculatePrice(100);
+
+        console.log('****Second Function of part-1 is started from here *****')
+        function secondCalculatePrice(price,taxes,description){
+            taxes = taxes ?? 0.5;
+            description=description ?? 'Default items'
+            const total = price*(1+taxes)
+            console.log(`${description} with Tax : ${total}`)
+        }
+        secondCalculatePrice(100,0,''); // here it consideres 0 and '' as a value;
+        //they both print the same thing
+        secondCalculatePrice(100,undefined,undefined);
+        secondCalculatePrice(100);
+
+        // part-2
+        console.log('//////////////part-2 started/////////////');
+        
+    </script>
+</body>
+</html>
